@@ -45,6 +45,10 @@
       margin-bottom: 20px;
       position: relative; /* Position relative for positioning the tag */
     }
+    .publication h3 {
+      position: relative; /* Ensure the title's z-index is higher than the tag */
+      z-index: 1; /* Ensure the title's z-index is higher than the tag */
+    }
     .publication .tag {
       position: absolute;
       top: 0;
@@ -54,6 +58,7 @@
       padding: 5px 10px;
       border-radius: 5px;
       font-size: 14px;
+      z-index: 2; /* Ensure the tag's z-index is higher than the publication content */
     }
   </style>
 </head>
