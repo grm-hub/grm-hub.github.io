@@ -10,12 +10,32 @@
       background-color: #f2f2f2; /* Soft gray background */
       margin: 0;
       padding: 0;
+      display: flex; /* Use flexbox for layout */
+      justify-content: center; /* Center the content horizontally */
+      align-items: center; /* Center the content vertically */
+      height: 100vh; /* Full height of viewport */
+    }
+    .container {
+      max-width: 800px;
+      padding: 20px;
+      background-color: #fff; /* White content background */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      display: flex; /* Use flexbox for layout */
+    }
+    .sidebar {
+      flex: 0 0 200px; /* Sidebar width */
+      padding-right: 20px;
+    }
+    .content {
+      flex: 1; /* Take remaining space */
     }
     header {
       background-color: #444; /* Dark gray header background */
       color: #fff; /* White text */
       padding: 20px;
       text-align: center;
+      margin-bottom: 20px;
     }
     h1 {
       font-size: 36px;
@@ -23,78 +43,59 @@
     p {
       font-size: 18px;
     }
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff; /* White content background */
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    }
-    h2 {
-      color: #444; /* Dark gray heading */
-      font-size: 24px;
-    }
-    .bio {
-      margin-top: 30px;
-    }
     .publications {
-      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .publication {
-      position: relative; /* Position relative for positioning the tag */
-    }
-    .publication h3 {
-      margin-right: 120px;
-      position: relative; /* Ensure the title's z-index is higher than the tag */
-      z-index: 1; /* Ensure the title's z-index is higher than the tag */
-    }
-    .publication .tag {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: #280274; /* Dark purple tag background */
-      color: #fff; /* White text */
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 14px;
-      z-index: 2; /* Ensure the tag's z-index is higher than the publication content */
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Gonzalo Romero</h1>
-  <p>PhD Candidate in Economics | Researcher at ISEAK</p>
-</header>
-
 <div class="container">
-  <section class="bio">
-    <h2>Short Bio</h2>
-    <p>Gonzalo Romero is currently pursuing a PhD in Economics at UPV/EHU University. </p>
-  </section>
+  <aside class="sidebar">
+    <header>
+      <h1>Gonzalo Romero</h1>
+      <p>PhD Candidate in [Your Field]</p>
+      <p>Researcher | Educator</p>
+    </header>
+    <nav>
+      <!-- Add navigation links here if needed -->
+    </nav>
+  </aside>
+  <main class="content">
+    <section class="bio">
+      <h2>Short Bio</h2>
+      <p>Gonzalo Romero is a passionate researcher and educator currently pursuing a PhD in [Your Field] at [Your University]. His research interests include [Your Research Interests]. Outside of academia, Gonzalo enjoys [Your Hobbies or Interests].</p>
+    </section>
 
-  <section class="publications">
-    <h2>Selected Publications</h2>
-    <div class="publication">
-      <h3>Employment effects of the minimum wage: evidence from the Spanish 2019 reform</h3>
-      <span class="tag">Refereed Publication</span>
-      <p>with Lucía Gorjón and David Martinez de Lafuente</p>
-      <p>SERIEs - Journal of the Spanish Economic Association</p>
-      <p>2023</p>
-      <p><a href="#">https://link.springer.com/article/10.1007/s13209-023-00291-1</a></p>
-    </div>
-    <div class="publication">
-      <h3>Desiguales ante el empleo. La igualdad en el empleo como vía para la igualdad de ingresos</h3>
-      <span class="tag">Book Chapter</span>
-      <p>with Sara de la Rica and Lucía Gorjón</p>
-      <p>in Desigualdad y Pacto Social. Observatorio Social de La Caixa</p>
-      <p>2022</p>
-      <p><a href="#">https://www.researchgate.net/profile/Luis-Ayala-8/publication/366123183_Desigualdad_y_pacto_social/links/639235ac11e9f00cda2d0549/Desigualdad-y-pacto-social.pdf#page=25</a></p>
-    </div>
-    <!-- Add more publications as needed -->
-  </section>
+    <section class="publications">
+      <h2>Publications</h2>
+      <div class="publication">
+        <h3>Title of Publication 1</h3>
+        <span class="tag">Refereed Publications</span>
+        <p>Authors: Gonzalo Romero, John Doe, Jane Smith</p>
+        <p>Journal/Conference: Journal/Conference Name</p>
+        <p>Year: YYYY</p>
+        <p><a href="#">Link to Publication</a></p>
+      </div>
+      <div class="publication">
+        <h3>Title of Publication 2</h3>
+        <span class="tag">Refereed Publications</span>
+        <p>Authors: Gonzalo Romero, John Doe, Jane Smith</p>
+        <p>Journal/Conference: Journal/Conference Name</p>
+        <p>Year: YYYY</p>
+        <p><a href="#">Link to Publication</a></p>
+      </div>
+      <!-- Add more publications as needed -->
+    </section>
+  </main>
 </div>
 
 </body>
