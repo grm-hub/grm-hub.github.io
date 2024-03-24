@@ -1,3 +1,6 @@
+Sure, let's reintroduce the publication tag and ensure it only appears within the publication section. Here's the updated code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,12 +53,23 @@
     .section p {
       margin-bottom: 10px;
     }
-    .section .entry {
+    .entry {
       background-color: #f9f9f9;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       margin-bottom: 20px;
+      position: relative;
+    }
+    .tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #280274; /* Dark purple tag background */
+      color: #fff; /* White text */
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -79,14 +93,16 @@
     <section class="section">
       <h2>Publications</h2>
       <div class="entry">
-        <p>Title of Publication 1</p>
+        <h3>Title of Publication 1</h3>
+        <span class="tag">Refereed Publications</span>
         <p>Authors: Gonzalo Romero, John Doe, Jane Smith</p>
         <p>Journal/Conference: Journal/Conference Name</p>
         <p>Year: YYYY</p>
         <p><a href="#">Link to Publication</a></p>
       </div>
       <div class="entry">
-        <p>Title of Publication 2</p>
+        <h3>Title of Publication 2</h3>
+        <span class="tag">Refereed Publications</span>
         <p>Authors: Gonzalo Romero, John Doe, Jane Smith</p>
         <p>Journal/Conference: Journal/Conference Name</p>
         <p>Year: YYYY</p>
@@ -104,13 +120,4 @@
       </div>
       <div class="entry">
         <p>Project 1</p>
-        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam purus et metus posuere, eget blandit erat faucibus.</p>
-        <p><a href="#">Link to Project</a></p>
-      </div>
-      <!-- Add more blog posts or projects as needed -->
-    </section>
-  </div>
-</div>
-
-</body>
-</html>
+        <p>Description: Lorem ipsum dolor
